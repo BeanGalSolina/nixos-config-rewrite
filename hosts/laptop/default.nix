@@ -12,6 +12,7 @@
 	 pkgsAug2025 = inputs.nixpkgs-august-2025.legacyPackages."x86_64-linux";
 	 NixOSUtils = inputs.nixos-utils.nixosModules."x86_64-linux";
 	 nixModules = self.nixosModules;
+	 homeModules = self.homeModules;
 	 isGui = true;
 	 isGaming = true;
       };

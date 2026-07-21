@@ -13,6 +13,8 @@
 
    system.stateVersion = "23.05";
    networking.hostName = "NixOS-Laptop";
+   
+   home-manager.users.solina.xdg.configFile."niri/display.kdl".source = ./niri-display.kdl;
 
    environment.systemPackages = with pkgs; [
       (jdk21.override {enableJavaFX = true;})
