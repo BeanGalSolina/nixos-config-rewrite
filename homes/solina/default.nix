@@ -8,7 +8,7 @@
 	imports = [
 		"${userParams.solina.home-modules}/imagemagick"
 		"${userParams.solina.home-modules}/useless-commands"
-		"${userParams.solina.home-modules}/modern-coreutils"
+		"${userParams.solina.home-modules}/utils"
 		"${userParams.solina.home-modules}/fastfetch"
 		"${userParams.solina.home-modules}/neovim"
 		"${userParams.solina.home-modules}/tmux"

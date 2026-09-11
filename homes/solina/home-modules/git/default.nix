@@ -15,6 +15,7 @@
 
 			core = {
 				hooksPath = "${config.xdg.configHome}/git/hooks";
+				autocrl = "input";
 			};
 
 			commit = {

@@ -11,7 +11,6 @@
       bat
       btop
       espeak-ng
-      tmux
    ];
 
    programs.zoxide = {
