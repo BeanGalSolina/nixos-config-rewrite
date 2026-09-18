@@ -27,8 +27,8 @@
 			};
 			
 			user = {
-				name = "TheBunnyMan123";
-				email = "bunny@tkbunny.net";
+				name = "BeanGalSolina";
+				email = "solina@beangal.dev";
 			};
 
 			alias = {
