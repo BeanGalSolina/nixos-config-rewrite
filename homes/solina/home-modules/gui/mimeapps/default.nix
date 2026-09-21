@@ -1,14 +1,18 @@
 {
 	pkgs,
+	pkgsLibreoffice,
 	userParams,
 	config,
 	...
 }: let
 	packages = with pkgs; [
 		smplayer
-		libreoffice
+		pkgsLibreoffice.libreoffice
 		gthumb
 		yazi
+	];
+
+	noinstall = with pkgs; [
 		config.programs.firefox.package
 	];
 in {
@@ -18,7 +22,7 @@ in {
 		enable = true;
 		mimeApps = {
 			enable = true;
-			defaultApplicationPackages = packages;
+			defaultApplicationPackages = packages ++ noinstall;
 		};
 	};
 }
