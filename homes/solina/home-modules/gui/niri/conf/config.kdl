@@ -12,6 +12,7 @@ spawn-at-startup "quickshell" "-c" "shell"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "dconf" "write" "/org/gnome/desktop/interface/color-scheme" "\"prefer-dark\""
 spawn-at-startup "dconf" "write" "/org/gnome/desktop/interface/gtk-theme" "\"Adwaita-dark\""
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular" "--selection-size-limit" "1048576"
 spawn-sh-at-startup "~/.bin/repalybuf-start.sh"
 spawn-sh-at-startup "~/.bin/niri-active.sh"
 

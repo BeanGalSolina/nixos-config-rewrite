@@ -14,6 +14,7 @@
 		"${userParams.solina.home-modules}/tmux"
 		"${userParams.solina.home-modules}/zsh"
 		"${userParams.solina.home-modules}/git"
+		"${userParams.solina.home-modules}/jdks"
 	] ++ (if isGui || isGaming then [
 		"${userParams.solina.home-modules}/gui/fonts"
 		"${userParams.solina.home-modules}/gui/mimeapps"

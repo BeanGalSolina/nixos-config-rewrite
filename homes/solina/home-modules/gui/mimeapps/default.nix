@@ -10,6 +10,7 @@
 		pkgsLibreoffice.libreoffice
 		gthumb
 		yazi
+		filezilla
 	];
 
 	noinstall = with pkgs; [

@@ -47,6 +47,7 @@ in {
 		dconf
 		xwayland-satellite
 		jq
+		wl-clip-persist
 	];
 
 	xdg.enable = true;
