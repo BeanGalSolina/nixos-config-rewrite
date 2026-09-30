@@ -29,6 +29,13 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		fluxer = {
+			url = "github:Hy4ri/fluxer-flake";
+			inputs = {
+				nixpkgs.follows = "nixpkgs";
+			};
+		};
+
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		hardware.url = "github:nixos/nixos-hardware";
 		nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";

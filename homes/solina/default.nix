@@ -23,6 +23,7 @@
 		"${userParams.solina.home-modules}/gui/firefox"
 		"${userParams.solina.home-modules}/gui/kitty"
 		"${userParams.solina.home-modules}/gui/vencord"
+		"${userParams.solina.home-modules}/gui/fluxer"
 		"${userParams.solina.home-modules}/gui/stoat"
 		"${userParams.solina.home-modules}/gui/creativity-suite"
 	] else []) ++ (if isGaming then [

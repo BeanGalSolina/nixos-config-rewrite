@@ -38,6 +38,7 @@ in {
 			settings = {
 				"extensions.autoDisableScopes" = 0;
 				"xpinstall.signatures.required" = false;
+				"browser.nova.enable" = false;
 			};
 
 			search.force = true;

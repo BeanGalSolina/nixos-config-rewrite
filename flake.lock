@@ -161,6 +161,26 @@
         "type": "github"
       }
     },
+    "fluxer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790539042,
+        "narHash": "sha256-QX5Z/FGc0vBjOI7/+PqdbLt5iS/eiBBHAZ8pHRyH62M=",
+        "owner": "Hy4ri",
+        "repo": "fluxer-flake",
+        "rev": "acb52e4a49842128c3f302cfbdf3d255daa0067f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Hy4ri",
+        "repo": "fluxer-flake",
+        "type": "github"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -363,6 +383,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "flake-parts": "flake-parts",
+        "fluxer": "fluxer",
         "hardware": "hardware",
         "home-manager": "home-manager",
         "nixos-utils": "nixos-utils",
