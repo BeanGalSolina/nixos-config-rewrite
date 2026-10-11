@@ -151,6 +151,7 @@
 					FullUserInChatbox.enabled = true;
 					IrcColors.enabled = true;
 					MessageClickActions = true;
+					FakeNitro.enabled = true;
 				};
 			};
 		};

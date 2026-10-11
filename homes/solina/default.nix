@@ -29,6 +29,7 @@
 		"${userParams.solina.home-modules}/gui/midi"
 	] else []) ++ (if isGaming then [
 		"${userParams.solina.home-modules}/gaming/prismlauncher"
+		"${userParams.solina.home-modules}/gaming/viaproxy"
 	] else []);
 }
 
