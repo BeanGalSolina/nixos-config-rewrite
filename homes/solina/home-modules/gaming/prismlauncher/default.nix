@@ -2,15 +2,10 @@
 {
 	pkgs,
 	lib,
-	sys-modules,
 	...
 }: {
-	imports = [ "${sys-modules}/programs/viaproxy" ];
-	environment.systemPackages = [
+	home.packages = [
 		(pkgs.prismlauncher.override {
-			glfw3-minecraft = pkgs.glfw3-minecraft.override {
-				withMinecraftPatch = true;
-			};
 			additionalLibs = with pkgs; map lib.getLib [
 				libdecor
 				gtk3

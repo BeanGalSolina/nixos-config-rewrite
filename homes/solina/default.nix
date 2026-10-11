@@ -28,6 +28,7 @@
 		"${userParams.solina.home-modules}/gui/creativity-suite"
 		"${userParams.solina.home-modules}/gui/midi"
 	] else []) ++ (if isGaming then [
+		"${userParams.solina.home-modules}/gaming/prismlauncher"
 	] else []);
 }
 
