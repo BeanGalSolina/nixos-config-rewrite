@@ -2,7 +2,7 @@
 	pkgs,
 	...
 }: {
-	environment.systemPackages = [
+	home.packages = [
 		(pkgs.callPackage ./package.nix {})
 	];
 }
