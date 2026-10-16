@@ -38,11 +38,11 @@
 				config = builtins.readFile ./lspconfig.lua;
 				type = "lua";
 			}
-			{
-				plugin = presence-nvim;
-				config = builtins.readFile ./presence.lua;
-				type = "lua";
-			}
+			#{
+			#	plugin = presence-nvim;
+			#	config = builtins.readFile ./presence.lua;
+			#	type = "lua";
+			#}
 			{
 				plugin = nvim-cmp;
 				config = builtins.readFile ./cmp.lua;
