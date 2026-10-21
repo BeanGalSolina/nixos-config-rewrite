@@ -5,8 +5,8 @@
 #include <string.h>
 #include <pwd.h>
 
-const char* OPTIONS[] = { "Niri", "Plasma", "Console" };
-const char NUM_OPTIONS = 3;
+const char* OPTIONS[] = { "Niri", "Console" };
+const char NUM_OPTIONS = 2;
 
 int main() {
 	initscr();
@@ -40,14 +40,14 @@ int main() {
 				choice--;
 				
 				if (choice < 0) {
-					choice = 2;
+					choice = NUM_OPTIONS - 1;
 				}
 
 				break;
 			case KEY_DOWN:
 				choice++;
 
-				if (choice > 2) {
+				if (choice > (NUM_OPTIONS - 1)) {
 					choice = 0;
 				}
 
@@ -64,10 +64,7 @@ int main() {
 		case 0: // Niri
 			execlp("niri-session", "niri-session", (char*) NULL);
 			break;
-		case 1: // Plasma
-			execlp("dbus-run-session", "dbus-run-session", "startplasma-wayland", (char *)NULL);
-			break;
-		case 2: // Console
+		case 1: // Console
 			break;
 	}
 
