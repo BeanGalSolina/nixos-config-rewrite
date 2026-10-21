@@ -12,6 +12,7 @@
 			gamescope
 		];
 		extraCompatPackages = with pkgs; [
+			dwproton-bin
 			proton-ge-bin
 			steam-play-none
 		];

@@ -35,13 +35,6 @@ in {
 	
 	home.file.".bin/niri-active.sh".source = ./niri-active.sh;
 
-	programs.zsh.initContent = lib.mkBefore ''
-		if [[ "$(tty)" == "/dev/tty1" ]]
-		then
-			exec niri-session
-		fi
-	'';
-
 	home.packages = with pkgs; [
 		niri
 		dconf

@@ -6,7 +6,6 @@
 }: {
 	imports = [
 		"${sys-modules}/other/catppuccin"
-		"${sys-modules}/programs/hyprland"
 		"${sys-modules}/programs/obs"
 		"${sys-modules}/programs/idea"
 		"${sys-modules}/udev/keyboard-not-controller"
@@ -20,7 +19,9 @@
 		"${sys-modules}/bases/tty"
 	];
    
-   services.flatpak.enable = true;
+	services.flatpak.enable = true;
+	xdg.portal.enable = true;
+	xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-termfilechooser ] ;
 
 	home-manager.backupFileExtension = "bak";
 	home-manager.users.solina.xdg.configFile."niri/display.kdl".source = lib.mkDefault ./display.kdl;

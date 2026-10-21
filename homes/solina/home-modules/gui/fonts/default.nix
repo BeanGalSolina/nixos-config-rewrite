@@ -15,6 +15,10 @@ in {
 		noto-fonts
 		noto-fonts-cjk-sans
 		noto-fonts-cjk-serif
+
+		# Extra Fonts
+		dancing-script
+		vista-fonts
 	]) ++ (with pkgs.nerd-fonts; [
 		meslo-lg
 		symbols-only

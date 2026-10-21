@@ -19,6 +19,7 @@
 		"${userParams.solina.home-modules}/gui/fonts"
 		"${userParams.solina.home-modules}/gui/mimeapps"
 		"${userParams.solina.home-modules}/gui/niri"
+		"${userParams.solina.home-modules}/gui/display"
 		"${userParams.solina.home-modules}/gui/chromium"
 		"${userParams.solina.home-modules}/gui/firefox"
 		"${userParams.solina.home-modules}/gui/kitty"

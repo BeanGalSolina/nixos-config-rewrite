@@ -38,6 +38,7 @@
             "${sys-modules}/system/users/solina"
 
             "${sys-modules}/bases/gaming"
+            "${sys-modules}/system/graphics/amd"
 
             ./hardware-configuration.nix
             ./config.nix
