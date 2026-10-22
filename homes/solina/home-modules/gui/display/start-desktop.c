@@ -5,8 +5,17 @@
 #include <string.h>
 #include <pwd.h>
 
-const char* OPTIONS[] = { "Niri", "Console" };
-const char NUM_OPTIONS = 2;
+typedef struct {
+	char* name;
+	char** command;
+} WindowManager;
+
+const WindowManager OPTIONS[] = { 
+	{ .name = "Niri", .command = (char *[]) {"niri-session", NULL} },
+	{ .name = "XFCE", .command = (char *[]) {"dbus-run-session", "startxfce4", NULL} },
+	{ .name = "Console", .command = NULL }
+};
+const char NUM_OPTIONS = sizeof(OPTIONS) / sizeof(OPTIONS[0]);
 
 int main() {
 	initscr();
@@ -15,7 +24,7 @@ int main() {
 	curs_set(0);
 	keypad(stdscr, TRUE);
 
-	char choice = 0;
+	int choice = 0;
 	bool chosen = false;
 	while (!chosen) {
 		move(1, 0);
@@ -28,7 +37,7 @@ int main() {
 				printw("    ");
 			}
 
-			printw("%s\n", OPTIONS[i]);
+			printw("%s\n", OPTIONS[i].name);
 		}
 
 		refresh();
@@ -47,7 +56,7 @@ int main() {
 			case KEY_DOWN:
 				choice++;
 
-				if (choice > (NUM_OPTIONS - 1)) {
+				if (choice > NUM_OPTIONS - 1) {
 					choice = 0;
 				}
 
@@ -60,14 +69,10 @@ int main() {
 	
 	endwin();
 
-	switch (choice) {
-		case 0: // Niri
-			execlp("niri-session", "niri-session", (char*) NULL);
-			break;
-		case 1: // Console
-			break;
+	if (OPTIONS[choice].command != NULL) {
+		execvp(OPTIONS[choice].command[0], OPTIONS[choice].command);
 	}
 
-	return 1;
+	return 0;
 }
 
