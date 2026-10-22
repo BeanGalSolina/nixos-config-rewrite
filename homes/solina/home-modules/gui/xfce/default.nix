@@ -15,6 +15,7 @@
 		xfce4-settings
 		xfwm4
 		xfce4-exo
+		labwc
 	];
 }
 

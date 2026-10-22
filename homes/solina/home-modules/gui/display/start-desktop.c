@@ -12,7 +12,7 @@ typedef struct {
 
 const WindowManager OPTIONS[] = { 
 	{ .name = "Niri", .command = (char *[]) {"niri-session", NULL} },
-	{ .name = "XFCE", .command = (char *[]) {"dbus-run-session", "startxfce4", NULL} },
+	{ .name = "XFCE (LabWC)", .command = (char *[]) {"labwc", "-s", "startxfce4", NULL} },
 	{ .name = "Console", .command = NULL }
 };
 const char NUM_OPTIONS = sizeof(OPTIONS) / sizeof(OPTIONS[0]);
