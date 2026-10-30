@@ -30,11 +30,11 @@ in {
 
 		defaultFonts = let
 			unifont = [ "Unifont" "Unifont Upper" ];
-			fallback = [ "Symbols Nerd Font" "Fira Math" "Noto Color Emoji" unifont ];
+			fallback = [ "Symbols Nerd Font" "Fira Math" "Noto Color Emoji" ];
 		in {
-			sansSerif = lib.lists.flatten [ "Arial" notoLists.sans "Noto Kufi Arabic" fallback ];
-			serif = lib.lists.flatten [ "Times New Roman" notoLists.serif "Noto Naskh Arabic" fallback ];
-			monospace = lib.lists.flatten [ "MesloLGS Nerd Font" notoLists.mono fallback ];
+			sansSerif = lib.lists.flatten [ "Arial" fallback notoLists.sans "Noto Kufi Arabic" unifont ];
+			serif = lib.lists.flatten [ "Times New Roman" fallback notoLists.serif "Noto Naskh Arabic" unifont ];
+			monospace = lib.lists.flatten [ "MesloLGS Nerd Font" fallback notoLists.mono unifont ];
 			emoji = [ "Noto Color Emoji" ];
 		};
 	};

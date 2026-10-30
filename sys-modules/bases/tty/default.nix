@@ -25,6 +25,7 @@
       "${sys-modules}/services/cups"
       "${sys-modules}/services/syncthing"
       "${sys-modules}/services/openssh"
+      "${sys-modules}/services/envfs"
 
       "${sys-modules}/other/nix"
       "${sys-modules}/workarounds"

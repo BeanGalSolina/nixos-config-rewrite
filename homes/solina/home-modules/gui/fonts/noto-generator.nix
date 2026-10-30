@@ -28,11 +28,11 @@
 		mkdir -p $XDG_CACHE_HOME $FC_CONFIG_DIR
 		echo "{" > $out
 		echo "sans=[" >> $out
-		fc-list : family | grep -E '${sans}[^,]+' | sort | sed -z '${sed}' >> $out
+		fc-list : family -f "%{family}\n" | awk 'match($0, /${sans}[^,]+/) {print substr($0, RSTART, RLENGTH)}' | sort | sed -z '${sed}' >> $out
 		echo "];serif=[" >> $out
-		fc-list : family | grep -E '${serif}[^,]+' | sort | sed -z '${sed}' >> $out
+		fc-list : family -f "%{family}\n" | awk 'match($0, /${serif}[^,]+/) {print substr($0, RSTART, RLENGTH)}' | sort | sed -z '${sed}' >> $out
 		echo "];mono=[" >> $out
-		fc-list : family | grep -E '${mono}[^,]+' | sort | sed -z '${sed}' >> $out
+		fc-list : family -f "%{family}\n" | awk 'match($0, /${mono}[^,]+/) {print substr($0, RSTART, RLENGTH)}' | sort | sed -z '${sed}' >> $out
 		echo "];}" >> $out
 	'';
 in import generated

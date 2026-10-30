@@ -29,10 +29,10 @@
 	 "keyColor": "blue"
       },
       {
-	 "type": "packages",
+	 "type": "command",
 	 "key": "╰─ \ueb29 Pkgs  ",
 	 "keyColor": "blue",
-	 "format": "{1} Total"
+	 "text": "echo $PKGS$ \\(total\\), $PKGS.SYSTEM$ \\(system\\), $PKGS.HOME$ \\(user\\)"
       },
       "break",
       {
