@@ -25,20 +25,6 @@
 							}
 							{
 								type = "ladspa";
-								name = "lsp_gate";
-								plugin = "lsp-plugins-ladspa";
-								label = "http://lsp-plug.in/plugins/ladspa/gate_mono";
-								control = {
-									"Curve threshold (G)" = 0.05;
-									"Hysteresis threshold (G)" = 0.005;
-									"Attack (ms)" = 5.0;
-									"Hold time (ms)" = 100.0;
-									"Release (ms)" = 200.0;
-									"Reduction (G)" = 0.001;
-								};
-							}
-							{
-								type = "ladspa";
 								name = "gain";
 								plugin = "lsp-plugins-ladspa";
 								label = "http://lsp-plug.in/plugins/ladspa/filter_mono";
@@ -49,8 +35,7 @@
 						];
 
 						links = [
-							{ output = "rnnoise:Output"; input = "lsp_gate:Input"; }
-							{ output = "lsp_gate:Output"; input = "gain:Input"; }
+							{ output = "rnnoise:Output"; input = "gain:Input"; }
 						];
 
 						inputs  = [ "rnnoise:Input" ];
