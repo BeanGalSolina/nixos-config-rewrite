@@ -203,6 +203,25 @@ in {
 					icon = "https://minecraft.wiki/favicon.ico";
 					aliases = [ "@mc" ];
 				};
+
+				reddit = {
+					name = "Reddit";
+					urls = [
+						{
+							template = "https://reddit.com/search/";
+							params = [
+								{
+									name = "q";
+									value = "{searchTerms}";
+								}
+							];
+						}
+					];
+
+					icon = "https://www.reddit.com/favicon.ico";
+					updateInterval = 7 * 24 * 60 * 60 * 1000;
+					definedAliases = [ "@rd" ];
+				};
 			};
 
 			extensions = {
