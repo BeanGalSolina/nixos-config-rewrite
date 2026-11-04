@@ -34,7 +34,11 @@ in {
 
 	home.file = {
 		".jdks".source = config.lib.file.mkOutOfStoreSymlink jvmDir;
-		".gradle/gradle.properties".text = "org.gradle.java.installations.paths=${jvmDir}";
+		".gradle/jdks".source = config.lib.file.mkOutOfStoreSymlink jvmDir;
+		".gradle/gradle.properties".text = ''
+org.gradle.java.installations.paths=${jvmDir}";
+org.gradle.java.installations.auto-download=false
+		'';
 		
 		".m2/toolchains.xml".text = ''
 <?xml version="1.0" encoding="UTF-8"?>
