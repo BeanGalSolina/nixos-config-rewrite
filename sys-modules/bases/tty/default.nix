@@ -1,8 +1,13 @@
 {
+	pkgs,
    sys-modules,
    ...
 }: {
    home-manager.useGlobalPkgs = true;
+
+   environment.systemPackages = with pkgs; [
+	android-tools
+   ];
 
    imports = [
       "${sys-modules}/programs/zsh"
