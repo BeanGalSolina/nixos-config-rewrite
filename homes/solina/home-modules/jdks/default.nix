@@ -7,10 +7,14 @@
 	jvmDir = "${config.xdg.dataHome}/jvm";
 	jdks = [
 		{ vendor = "openjdk"; version = "1.8"; path = "${pkgs.jdk8}/lib/openjdk"; }
-		{ vendor = "openjdk"; version = "11";  path = "${pkgs.jdk11}/lib/openjdk"; }
-		{ vendor = "openjdk"; version = "17";  path = "${pkgs.jdk17}/lib/openjdk"; }
-		{ vendor = "openjdk"; version = "21";  path = "${pkgs.jdk21}/lib/openjdk"; }
-		{ vendor = "openjdk"; version = "25";  path = "${pkgs.jdk25}/lib/openjdk"; }
+		{ vendor = "openjdk"; version = "11"; path = "${pkgs.jdk11}/lib/openjdk"; }
+		{ vendor = "openjdk"; version = "17"; path = "${pkgs.jdk17}/lib/openjdk"; }
+		{ vendor = "openjdk"; version = "21"; path = "${pkgs.jdk21}/lib/openjdk"; }
+		{ vendor = "openjdk"; version = "25"; path = "${pkgs.jdk25}/lib/openjdk"; }
+		
+		{ vendor = "temurin"; version = "1.8"; path = "${pkgs.temurin-jre-bin-8}"; }
+		{ vendor = "temurin"; version = "17"; path = "${pkgs.temurin-jre-bin-17}"; }
+		{ vendor = "temurin"; version = "21"; path = "${pkgs.temurin-jre-bin-21}"; }
 	];
 	jdkName = jdk: "${lib.strings.toLower jdk.vendor}-${jdk.version}";
 	mkJdkToolchain = jdk: ''
@@ -49,7 +53,7 @@ ${lib.strings.concatMapStringsSep "\n" mkJdkToolchain jdks}
 	};
 
 	xdg.dataFile = builtins.listToAttrs (map (jdk: {
-		name = "jvm/${jdkName jdk}";
+		name = "jvm/${jdkName jdk}${if (builtins.pathExists "${jdk.path}/bin/javac") then "" else "-jre"}";
 		value = { source = jdk.path; };
 	}) jdks);
 }
