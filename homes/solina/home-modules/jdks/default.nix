@@ -12,9 +12,13 @@
 		{ vendor = "openjdk"; version = "21"; path = "${pkgs.jdk21}/lib/openjdk"; }
 		{ vendor = "openjdk"; version = "25"; path = "${pkgs.jdk25}/lib/openjdk"; }
 		
-		{ vendor = "temurin"; version = "1.8"; path = "${pkgs.temurin-jre-bin-8}"; }
-		{ vendor = "temurin"; version = "17"; path = "${pkgs.temurin-jre-bin-17}"; }
-		{ vendor = "temurin"; version = "21"; path = "${pkgs.temurin-jre-bin-21}"; }
+		{ vendor = "temurin"; version = "1.8"; path = "${pkgs.temurin-bin-8}/lib/openjdk"; }
+		{ vendor = "temurin"; version = "17"; path = "${pkgs.temurin-bin-17}/lib/openjdk"; }
+		{ vendor = "temurin"; version = "21"; path = "${pkgs.temurin-bin-21}/lib/openjdk"; }
+
+		{ vendor = "zulu"; version = "8"; path = "${pkgs.zulu8.override { gtkSupport = false; }}/lib/openjdk"; }
+		{ vendor = "zulu"; version = "17"; path = "${pkgs.zulu17}/lib/openjdk"; }
+		{ vendor = "zulu"; version = "21"; path = "${pkgs.zulu21}/lib/openjdk"; }
 	];
 	jdkName = jdk: "${lib.strings.toLower jdk.vendor}-${jdk.version}";
 	mkJdkToolchain = jdk: ''
