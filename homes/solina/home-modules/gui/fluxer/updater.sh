@@ -2,6 +2,12 @@
 
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/fluxerupdate"
 cd "${XDG_DATA_HOME:-$HOME/.local/share}/fluxerupdate" || exit
+
+if cat version.txt
+then
+	appimage-run ./fluxer.AppImage "$@"
+fi
+
 zenity --info --title="Fetching" --text="Fetching release information..." --no-wrap &
 PID="$!"
 
@@ -23,20 +29,8 @@ while true; do
 done
 
 VERSION="$(printf "%s" "$RELEASE" | jq -r '.tag_name' | grep -o "[^@]*$")"
-GREATER="$(printf "%s %s" "$VERSION" "$(cat version.txt 2>/dev/null || printf "\xFF")" | sort -V | grep -o "^[^ ]*")"
 
 kill "$PID" 2>/dev/null
-
-if ! cat version.txt &>/dev/null
-then
-	GREATER=""
-fi
-
-if [[ "$GREATER" == "$VERSION" ]]
-then
-	appimage-run ./fluxer.AppImage
-	exit
-fi
 
 printf "%s" "$VERSION" > version.txt
 ASSET="$(printf "%s" "$RELEASE" | jq -r '[.assets[] | select(.name | test("-linux-x86_64\\.AppImage$"))][0]')"
