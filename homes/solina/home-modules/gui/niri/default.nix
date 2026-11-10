@@ -40,6 +40,7 @@ in {
 		xwayland-satellite
 		jq
 		wl-clip-persist
+		mpvpaper
 	];
 
 	xdg.enable = true;
