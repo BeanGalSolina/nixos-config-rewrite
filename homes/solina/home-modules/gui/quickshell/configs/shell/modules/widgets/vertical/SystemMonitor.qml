@@ -6,12 +6,12 @@ import qs.services
 ColumnLayout {
 	height: 155
 	width: parent.width
-	spacing: 0
+	spacing: 1
 
 	Rectangle {
 		id: storage
 		Layout.alignment: Qt.AlignHCenter
-		radius: 10
+		//radius: 10
 		height: 75
 		width: 7
 		color: Colors.overlay
@@ -41,8 +41,8 @@ ColumnLayout {
 			anchors.bottomMargin: 12
 			color: Colors.darkAccent
 			width: parent.width
-			topLeftRadius: 10
-			topRightRadius: 10
+			//topLeftRadius: 10
+			//topRightRadius: 10
 			height: SystemUsage.storageUsagePercent * 65
 
 			Text {
@@ -63,7 +63,7 @@ ColumnLayout {
 		Rectangle {
 			id: mem
 			Layout.alignment: Qt.AlignHCenter
-			radius: 10
+			//radius: 10
 			height: 75
 			width: 7
 			color: Colors.overlay
@@ -93,8 +93,8 @@ ColumnLayout {
 				anchors.bottomMargin: 12
 				color: Colors.darkAccent
 				width: parent.width
-				topLeftRadius: 10
-				topRightRadius: 10
+				//topLeftRadius: 10
+				//topRightRadius: 10
 				height: SystemUsage.memoryUsagePercent * 65
 
 				Text {
@@ -113,7 +113,7 @@ ColumnLayout {
 		Rectangle {
 			id: cpu
 			Layout.alignment: Qt.AlignHCenter
-			radius: 10
+			//radius: 10
 			height: 75
 			width: 7
 			color: Colors.overlay
@@ -145,8 +145,8 @@ ColumnLayout {
 				anchors.bottomMargin: 12
 				color: Colors.darkAccent
 				width: parent.width
-				topLeftRadius: 10
-				topRightRadius: 10
+				//topLeftRadius: 10
+				//topRightRadius: 10
 				height: SystemUsage.cpuPerformance * 65
 
 				Text {

@@ -53,9 +53,9 @@ Variants {
 							Layout.preferredWidth: parent.width
 							Layout.preferredHeight:	childrenRect.height
 							color: Colors.base
-							border.color: Colors.accent
+							border.color: Colors.border
 							border.width: 1
-							radius: 7
+							//radius: 7
 
 							ColumnLayout {
 								width: parent.width
@@ -112,7 +112,7 @@ Variants {
 												Rectangle {
 													width: parent.height
 													height: parent.height
-													radius: 5
+													//radius: 5
 
 													color: parent.containsMouse ? Colors.overlay : "transparent"
 
@@ -135,7 +135,7 @@ Variants {
 
 										Rectangle {
 											height: 1
-											radius: 999
+											//radius: 999
 											Layout.fillWidth: true
 											color: Colors.secondary_text
 										}
@@ -177,12 +177,12 @@ Variants {
 
 											Rectangle {
 												border.width: 1
-												border.color: Colors.accent
+												border.color: Colors.border
 												color: parent.containsMouse ? Colors.overlay : Colors.base
 												anchors.fill: parent
 
-												bottomLeftRadius: (index == 0) ? 7 : 0
-												bottomRightRadius: (index == actionRepeater.count - 1) ? 7 : 0
+												//bottomLeftRadius: (index == 0) ? 7 : 0
+												////bottomRightRadius: (index == actionRepeater.count - 1) ? 7 : 0
 
 												Text {
 													anchors.fill: parent

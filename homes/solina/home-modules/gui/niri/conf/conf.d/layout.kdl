@@ -5,16 +5,16 @@ layout {
 
 	border {
 		on
-		width 4
-		active-color "#74c7ec"
-		inactive-color "#45475a"
-		urgent-color "#f9e2af"
+		width 2
+		active-color "#9666ff"
+		inactive-color "#532b89"
+		urgent-color "#fff334"
 	}
 
 	tab-indicator {
-		active-color "#74c7ec"
-		inactive-color "#45475a"
-		urgent-color "#f9e2af"
+		active-color "#9666ff"
+		inactive-color "#532b89"
+		urgent-color "#fff334"
 	}
 	
 	default-column-width { proportion 0.4; }

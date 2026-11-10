@@ -6,7 +6,7 @@ Rectangle {
 	height: 10
 	width: 15
 	color: Colors.overlay
-	radius: 5
+	//radius: 5
 
 	Text {
 		width: parent.width

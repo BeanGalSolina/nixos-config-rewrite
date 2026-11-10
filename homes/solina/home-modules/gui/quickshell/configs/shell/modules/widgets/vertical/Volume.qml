@@ -14,7 +14,7 @@ Rectangle {
 	height: 80
 	width: 13
 	color: Colors.overlay
-	radius: 999
+	//radiu: 999
 
 	ColumnLayout {
 		anchors.fill: parent
@@ -41,7 +41,7 @@ Rectangle {
 				anchors.bottom: parent.bottom
 				anchors.bottomMargin: 3
 				anchors.horizontalCenter: parent.horizontalCenter
-				radius: 999
+				//radiu: 999
 				width: 3
 				color: Colors.secondary_text
 			}
@@ -55,7 +55,7 @@ Rectangle {
 				}
 				anchors.bottom: parent.bottom
 				anchors.horizontalCenter: parent.horizontalCenter
-				radius: 999
+				//radiu: 999
 				width: 7
 				color: Colors.accent
 			}

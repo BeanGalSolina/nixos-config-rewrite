@@ -28,13 +28,15 @@ Variants {
 				bottom: 6 * scale
 			}
 
-			implicitWidth: 38 * scale
+			implicitWidth: 40 * scale
 			color: "transparent"
 
 			Rectangle {
-				radius: 99999
+				//radius: 99999
 				anchors.fill: parent
 				color: Colors.base
+				border.width: 2
+				border.color: Colors.border
 
 				Item {
 					width: parent.width / (verticalBar.scale * 2)
@@ -47,10 +49,11 @@ Variants {
 
 					ColumnLayout {
 						anchors.fill: parent
+						anchors.leftMargin: -0.5
 						anchors.topMargin: 6
 						anchors.bottomMargin: 6
 						width: parent.width
-						spacing: 14
+						spacing: 6
 						
 						SystemTray {
 							Layout.alignment: Qt.AlignHCenter
