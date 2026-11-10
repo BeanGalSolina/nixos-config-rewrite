@@ -8,7 +8,6 @@
 	mkRelative = path: lib.removePrefix "./" (toString (lib.path.removePrefix ./conf path));
 in {
 	imports = [
-		"${userParams.solina.home-modules}/gui/hyprpaper"
 		"${userParams.solina.home-modules}/gui/kitty"
 		"${userParams.solina.home-modules}/gui/firefox"
 		"${userParams.solina.home-modules}/gui/quickshell"

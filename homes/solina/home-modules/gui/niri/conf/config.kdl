@@ -9,12 +9,17 @@ include "display.kdl"
 screenshot-path "~/Pictures/screenshots/scrn_%Y-%m-%d %H-%M-%S.png"
 
 spawn-at-startup "quickshell" "-c" "shell"
-spawn-at-startup "hyprpaper"
 spawn-at-startup "dconf" "write" "/org/gnome/desktop/interface/color-scheme" "\"prefer-dark\""
 spawn-at-startup "dconf" "write" "/org/gnome/desktop/interface/gtk-theme" "\"Adwaita-dark\""
 spawn-at-startup "wl-clip-persist" "--clipboard" "regular" "--selection-size-limit" "1048576"
+spawn-at-startup "mpvpaper" "-o" "no-audio --loop-file=inf --hwdec=auto" "all" "/home/solina/Videos/wallpaper.mp4"
 spawn-sh-at-startup "~/.bin/repalybuf-start.sh"
 spawn-sh-at-startup "~/.bin/niri-active.sh"
+
+layer-rule {
+	match namespace="^mpvpaper$"
+	place-within-backdrop true
+}
 
 gestures {
 	hot-corners {
