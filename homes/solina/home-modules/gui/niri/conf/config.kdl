@@ -16,11 +16,6 @@ spawn-at-startup "mpvpaper" "-o" "no-audio --loop-file=inf --hwdec=auto" "all" "
 spawn-sh-at-startup "~/.bin/repalybuf-start.sh"
 spawn-sh-at-startup "~/.bin/niri-active.sh"
 
-layer-rule {
-	match namespace="^mpvpaper$"
-	place-within-backdrop true
-}
-
 gestures {
 	hot-corners {
 		off
