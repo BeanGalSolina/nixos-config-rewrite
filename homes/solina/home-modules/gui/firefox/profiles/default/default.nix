@@ -256,6 +256,7 @@ in {
 
 			settings = {
 				"browser.aboutConfig.showWarning" = false;
+				"browser.nova.enabled" = false;
 			};
 		};
 	};
