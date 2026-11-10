@@ -29,12 +29,10 @@
 		w3m
 		rofi
 		waybar
-		swaynotificationcenter
 		grim
 		slurp
 		wl-clipboard
 		hypridle
-		hyprpaper
 		grimblast
 	];
 
