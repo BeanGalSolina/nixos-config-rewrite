@@ -14,10 +14,10 @@
 	];
 
 	noinstall = with pkgs; [
-		config.programs.firefox.package
+		config.programs.librewolf.package
 	];
 in {
-	imports = [ "${userParams.solina.home-modules}/gui/firefox" ];
+	imports = [ "${userParams.solina.home-modules}/gui/librewolf" ];
 	home.packages = packages;
 	xdg = {
 		enable = true;

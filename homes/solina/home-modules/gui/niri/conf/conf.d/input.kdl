@@ -21,7 +21,7 @@ binds {
 
 	Mod+Q		hotkey-overlay-title="Launch Kitty (tmux)" { spawn "kitty" "tmux" "new" "-A"; }
 	Mod+Shift+Q	hotkey-overlay-title="Launch Kitty" { spawn "kitty"; }
-	Mod+B		hotkey-overlay-title="Launch Firefox" { spawn "firefox-devedition"; }
+	Mod+B		hotkey-overlay-title="Launch Librewolf" { spawn "librewolf"; }
 	Mod+R		hotkey-overlay-title="Launch Application" { spawn "rofi" "-show" "drun"; }
 
 	Mod+O		repeat=false hotkey-overlay-title="Toggle Overview" { toggle-overview; }

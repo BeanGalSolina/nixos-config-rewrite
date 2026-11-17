@@ -1,19 +1,23 @@
 {
-   ...
+	...
 }: {
-   services.avahi = {
-      enable = true;
-      openFirewall = true;
-      nssmdns4 = true;
-      ipv4 = true;
-      ipv6 = true;
+	services.avahi = {
+		enable = true;
+		openFirewall = true;
+		nssmdns4 = true;
 
-      publish = {
-         enable = true;
-         addresses = true;
-         workstation = true;
-         userServices = true;
-      };
-   };
+		settings = {
+			server = {
+				use-ipv4 = true;
+				use-ipv6 = true;
+			};
+
+			publish = {
+				disable-publishing = true;
+				publish-addresses = true;
+				publish-workstation = true;
+			};
+		};
+	};
 }
 

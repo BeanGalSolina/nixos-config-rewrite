@@ -9,7 +9,7 @@
 in {
 	imports = [
 		"${userParams.solina.home-modules}/gui/kitty"
-		"${userParams.solina.home-modules}/gui/firefox"
+		"${userParams.solina.home-modules}/gui/librewolf"
 		"${userParams.solina.home-modules}/gui/quickshell"
 		"${userParams.solina.home-modules}/gui/rofi"
 		"${userParams.solina.home-modules}/gui/gtk"
