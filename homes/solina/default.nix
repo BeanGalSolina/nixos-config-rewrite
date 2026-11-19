@@ -15,6 +15,8 @@
 		"${userParams.solina.home-modules}/zsh"
 		"${userParams.solina.home-modules}/git"
 		"${userParams.solina.home-modules}/jdks"
+		"${userParams.solina.home-modules}/C"
+		"${userParams.solina.home-modules}/rust"
 	] ++ (if isGui || isGaming then [
 		"${userParams.solina.home-modules}/gui/fonts"
 		"${userParams.solina.home-modules}/gui/mimeapps"
@@ -28,6 +30,7 @@
 		"${userParams.solina.home-modules}/gui/stoat"
 		"${userParams.solina.home-modules}/gui/creativity-suite"
 		"${userParams.solina.home-modules}/gui/midi"
+		"${userParams.solina.home-modules}/gui/general"
 	] else []) ++ (if isGaming then [
 		"${userParams.solina.home-modules}/gaming/prismlauncher"
 		"${userParams.solina.home-modules}/gaming/viaproxy"

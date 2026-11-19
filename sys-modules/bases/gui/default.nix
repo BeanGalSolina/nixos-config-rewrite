@@ -30,7 +30,6 @@
 		cemu-ti
 		audacity
 		mpv
-		spotify
 
 		uv
 
