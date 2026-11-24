@@ -5,6 +5,7 @@
 		wireless = {
 			enable = true;
 			userControlled = true;
+			allowAuxiliaryImperativeNetworks = true;
 
 			networks = {
 				"Nacho WiFi" = {
